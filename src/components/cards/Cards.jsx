@@ -5,7 +5,7 @@ import HorizontalCard from "./HorizontalCard"
 function Cards({ data, vertical = false }) {
     return data && data.length > 0 ? (
         vertical ? (
-            <div className="flex">
+            <div className="flex overflow-x-auto md:justify-center">
                 {data.map((_, index) => (
                     <VerticalCard data={data[index]} />
                 ))}
