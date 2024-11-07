@@ -1,31 +1,30 @@
-import React from "react"
-import Header from "./components/header/Header"
-import ImageCarousel from "./components/imagecarousel/imagecarousel"
-import Cards from "./components/cards/Cards"
+import React, { useState } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import { MainCarousel } from "./data/maincarousel"
-import { PointsOfInterest } from "./data/pointsOfInterest"
+import Header from "./components/header/Header"
+import Home from "./pages/Home"
+import NoPage from "./pages/NoPage"
 
 const App = () => {
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    const handleMenuClick = () => {
+        setMenuOpen((prev) => !prev)
+        console.log(menuOpen)
+    }
+
     return (
         <>
-            <Header />
-            <ImageCarousel imgArray={MainCarousel} />
-            <h1 className="m-4 text-center text-3xl font-bold">
-                Welcome to Taniti
-            </h1>
-            <p className="m-4 text-center font-semibold">
-                While the island has an area of less than 500 square miles, the
-                terrain is varied and includes both sandy and rocky beaches, a
-                small but safe harbor, lush tropical rainforests, and a
-                mountainous interior that includes a small, active volcano.
-                Whether you just want to relax or escape on an adventure, Taniti
-                has it all.
-            </p>
-            <h1 className="m-4 text-center text-3xl font-bold">
-                Points of Interest
-            </h1>
-            <Cards data={PointsOfInterest} vertical={true} />
+            <Header handleMenuClick={handleMenuClick} isMenuOpen={menuOpen} />
+            <div className="mx-3 lg:mx-16 xl:mx-72">
+                <BrowserRouter>
+                    <Routes>
+                        <Route index element={<Home />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="*" element={<NoPage />} />
+                    </Routes>
+                </BrowserRouter>
+            </div>
         </>
     )
 }
