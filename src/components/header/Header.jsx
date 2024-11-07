@@ -10,22 +10,22 @@ function Header({ handleMenuClick, isMenuOpen }) {
             href: "/home",
         },
         {
-            id: 1,
+            id: 2,
             name: "Profile",
             href: "/profile",
         },
         {
-            id: 1,
+            id: 3,
             name: "Attractions",
             href: "/attractions",
         },
         {
-            id: 1,
+            id: 4,
             name: "Transportation",
             href: "/transportation",
         },
         {
-            id: 1,
+            id: 5,
             name: "Lodging",
             href: "/lodging",
         },
@@ -52,7 +52,7 @@ function Header({ handleMenuClick, isMenuOpen }) {
             >
                 <ul className="mt-8 text-center">
                     {menuItems.map((item) => (
-                        <li id={item.id} className="m-4">
+                        <li key={item.id} className="m-4">
                             <a
                                 href={item.href}
                                 className="font-bold text-white"
