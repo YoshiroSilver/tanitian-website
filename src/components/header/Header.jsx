@@ -64,9 +64,13 @@ function Header({ handleMenuClick, isMenuOpen }) {
                 </ul>
             </div>
             {/*logo*/}
-            <div className="font-sans text-2xl font-extrabold">Taniti</div>
+            <a href="/home">
+                <div className="font-sans text-2xl font-extrabold">Taniti</div>
+            </a>
             {/*profile icon*/}
-            <IoIosPerson className="text-4xl font-extrabold" />
+            <a href="/profile">
+                <IoIosPerson className="text-4xl font-extrabold" />
+            </a>
         </div>
     )
 }

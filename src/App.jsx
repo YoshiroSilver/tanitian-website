@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Header from "./components/header/Header"
 import Home from "./pages/Home"
+import Profile from "./pages/Profile"
 import NoPage from "./pages/NoPage"
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                     <Routes>
                         <Route index element={<Home />} />
                         <Route path="/home" element={<Home />} />
+                        <Route path="/profile" element={<Profile />} />
                         <Route path="*" element={<NoPage />} />
                     </Routes>
                 </BrowserRouter>
