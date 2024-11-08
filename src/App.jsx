@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Header from "./components/header/Header"
 import Home from "./pages/Home"
 import Profile from "./pages/Profile"
+import Transportation from "./pages/Transportation"
 import NoPage from "./pages/NoPage"
 
 const App = () => {
@@ -23,6 +24,10 @@ const App = () => {
                         <Route index element={<Home />} />
                         <Route path="/home" element={<Home />} />
                         <Route path="/profile" element={<Profile />} />
+                        <Route
+                            path="/transportation"
+                            element={<Transportation />}
+                        />
                         <Route path="*" element={<NoPage />} />
                     </Routes>
                 </BrowserRouter>
