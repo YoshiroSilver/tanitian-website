@@ -8,7 +8,7 @@ function Accordion({ data }) {
         setActiveIndex((prev) => (prev === index ? null : index))
     }
     return (
-        <div className="">
+        <div className="max-w-2xl">
             {data.map((item, index) => (
                 <AccordionItem
                     key={index}

@@ -1,6 +1,5 @@
 import React from "react"
 import { IoIosMenu, IoIosPerson } from "react-icons/io"
-import { Link } from "react-router-dom"
 
 function Header({ handleMenuClick, isMenuOpen }) {
     const menuItems = [
@@ -33,35 +32,37 @@ function Header({ handleMenuClick, isMenuOpen }) {
 
     return (
         /*header container */
-        <div className="m-4 flex justify-between">
+        <div className="mx-4 flex justify-between lg:mx-16 xl:mx-72">
             {/*menu icon */}
-            <IoIosMenu
-                className={
-                    isMenuOpen
-                        ? "z-20 text-4xl font-extrabold text-white"
-                        : "text-4xl font-extrabold"
-                }
-                onClick={handleMenuClick}
-            />
-            <div
-                className={
-                    isMenuOpen
-                        ? "absolute left-0 top-0 z-10 flex w-72 flex-col items-center rounded-b-lg rounded-r-lg bg-black"
-                        : "hidden"
-                }
-            >
-                <ul className="mt-8 text-center">
-                    {menuItems.map((item) => (
-                        <li key={item.id} className="m-4">
-                            <a
-                                href={item.href}
-                                className="font-bold text-white"
-                            >
-                                {item.name}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+            <div className="relative">
+                <IoIosMenu
+                    className={
+                        isMenuOpen
+                            ? "z-30 text-4xl font-extrabold text-text-50"
+                            : "text-4xl font-extrabold"
+                    }
+                    onClick={handleMenuClick}
+                />
+                <div
+                    className={
+                        isMenuOpen
+                            ? "absolute z-10 flex w-72 flex-col items-center rounded-b-lg rounded-r-lg bg-background-800"
+                            : "hidden"
+                    }
+                >
+                    <ul className="mt-8 text-center">
+                        {menuItems.map((item) => (
+                            <li key={item.id} className="m-4">
+                                <a
+                                    href={item.href}
+                                    className="font-bold text-text-300"
+                                >
+                                    {item.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
             {/*logo*/}
             <a href="/home">

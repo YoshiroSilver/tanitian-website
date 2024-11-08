@@ -16,7 +16,7 @@ const App = () => {
     }
 
     return (
-        <>
+        <div className="bg-background-500">
             <Header handleMenuClick={handleMenuClick} isMenuOpen={menuOpen} />
             <div className="mx-3 lg:mx-16 xl:mx-72">
                 <BrowserRouter>
@@ -32,7 +32,7 @@ const App = () => {
                     </Routes>
                 </BrowserRouter>
             </div>
-        </>
+        </div>
     )
 }
 

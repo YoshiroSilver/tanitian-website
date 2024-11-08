@@ -14,8 +14,10 @@ function Profile() {
                     className="aspect-square w-52 rounded-full border-2 border-black"
                 />
             </div>
-            <div className="mb-auto mt-4 flex flex-col content-center rounded-lg border-black bg-black text-center text-white">
-                <Accordion data={ProfileData} />
+            <div className="flex justify-center">
+                <div className="mb-auto mt-4 content-center rounded-lg border-black bg-black text-center text-white">
+                    <Accordion data={ProfileData} />
+                </div>
             </div>
         </>
     )
