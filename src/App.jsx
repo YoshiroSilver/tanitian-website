@@ -16,7 +16,7 @@ const App = () => {
     }
 
     return (
-        <div className="bg-background-500">
+        <div className="bg-background">
             <Header handleMenuClick={handleMenuClick} isMenuOpen={menuOpen} />
             <div className="mx-3 lg:mx-16 xl:mx-72">
                 <BrowserRouter>

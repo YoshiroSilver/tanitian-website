@@ -26,9 +26,16 @@ function AccordionItem({ item, isOpen, onclick }) {
                 {item.content ? (
                     Object.entries(item.content).map(([key, value]) => {
                         return (
-                            <div key={key} className="flex flex-row justify-center items-center">
-                                <h2 className="text-lg font-bold ml-2">{key}</h2>
-                                <p className="text-left m-2 bg-white text-black">{value.toString()}</p>
+                            <div
+                                key={key}
+                                className="flex flex-row items-center justify-center"
+                            >
+                                <h2 className="ml-2 text-lg font-bold">
+                                    {key}
+                                </h2>
+                                <p className="m-2 rounded bg-background text-left text-copy">
+                                    {value.toString()}
+                                </p>
                             </div>
                         )
                     })

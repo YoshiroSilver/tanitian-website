@@ -11,11 +11,11 @@ function Profile() {
                 <img
                     src={ProfilePic}
                     alt="Profile Picture stand in."
-                    className="aspect-square w-52 rounded-full border-2 border-black"
+                    className="aspect-square w-52 rounded-full border-2 border-secondary"
                 />
             </div>
             <div className="flex justify-center">
-                <div className="mb-auto mt-4 content-center rounded-lg border-black bg-black text-center text-white">
+                <div className="mb-auto mt-4 content-center rounded-lg border-border bg-foreground text-center text-primary">
                     <Accordion data={ProfileData} />
                 </div>
             </div>

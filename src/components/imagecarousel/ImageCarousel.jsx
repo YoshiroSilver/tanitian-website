@@ -30,14 +30,14 @@ function ImageCarousel({ imgArray }) {
     }
 
     return (
-        <div className="flex flex-col content-center justify-center">
+        <div className="my-4 flex flex-col content-center justify-center overflow-hidden rounded-lg bg-foreground">
             <div className="relative m-auto max-w-3xl">
                 <IoArrowForwardCircleOutline
-                    className="absolute right-4 top-1/2 rounded-full bg-gray-500 text-3xl hover:bg-black hover:text-white"
+                    className="absolute right-4 top-1/2 rounded-full bg-secondary text-3xl text-secondary-content hover:bg-black hover:text-white"
                     onClick={handleForward}
                 />
                 <IoArrowBackCircleOutline
-                    className="absolute left-4 top-1/2 rounded-full bg-gray-500 text-3xl hover:bg-black hover:text-white"
+                    className="absolute left-4 top-1/2 rounded-full bg-secondary text-3xl text-secondary-content hover:bg-black hover:text-white"
                     onClick={handleBack}
                 />
                 <img
@@ -49,12 +49,12 @@ function ImageCarousel({ imgArray }) {
                     }
                 />
             </div>
-            <div className="text-center text-base font-bold">
+            <div className="text-center text-base font-bold text-secondary">
                 {imgArray[currentSlide].name
                     ? imgArray[currentSlide].name
                     : "UnKnown"}
             </div>
-            <div className="text-center text-xs">
+            <div className="text-center text-xs text-secondary">
                 {imgArray[currentSlide].attribute
                     ? imgArray[currentSlide].attribute
                     : "UnKnown"}

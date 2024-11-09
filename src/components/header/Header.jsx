@@ -32,21 +32,17 @@ function Header({ handleMenuClick, isMenuOpen }) {
 
     return (
         /*header container */
-        <div className="mx-4 flex justify-between lg:mx-16 xl:mx-72">
+        <div className="sticky top-0 z-10 mx-4 mb-2 flex translate-y-2 justify-between rounded-lg bg-foreground lg:mx-16 xl:mx-72">
             {/*menu icon */}
             <div className="relative">
                 <IoIosMenu
-                    className={
-                        isMenuOpen
-                            ? "z-30 text-4xl font-extrabold text-text-50"
-                            : "text-4xl font-extrabold"
-                    }
+                    className="text-4xl font-extrabold text-primary"
                     onClick={handleMenuClick}
                 />
                 <div
                     className={
                         isMenuOpen
-                            ? "absolute z-10 flex w-72 flex-col items-center rounded-b-lg rounded-r-lg bg-background-800"
+                            ? "absolute z-10 flex w-72 flex-col items-center rounded-lg rounded-r-lg bg-primary"
                             : "hidden"
                     }
                 >
@@ -55,7 +51,7 @@ function Header({ handleMenuClick, isMenuOpen }) {
                             <li key={item.id} className="m-4">
                                 <a
                                     href={item.href}
-                                    className="font-bold text-text-300"
+                                    className="font-bold text-primary-content"
                                 >
                                     {item.name}
                                 </a>
@@ -66,11 +62,13 @@ function Header({ handleMenuClick, isMenuOpen }) {
             </div>
             {/*logo*/}
             <a href="/home">
-                <div className="font-sans text-2xl font-extrabold">Taniti</div>
+                <div className="font-sans text-2xl font-extrabold text-primary">
+                    Taniti
+                </div>
             </a>
             {/*profile icon*/}
             <a href="/profile">
-                <IoIosPerson className="text-4xl font-extrabold" />
+                <IoIosPerson className="text-4xl font-extrabold text-primary" />
             </a>
         </div>
     )

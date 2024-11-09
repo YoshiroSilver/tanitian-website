@@ -16,6 +16,6 @@ export const ProfileData = [
     {
         id: 3,
         title: "Preferences",
-        content: { Notifications: "Silenced", Rewards: "Opt-IN" },
+        content: { Notifications: "Silenced", Rewards: "Opt-In" },
     },
 ]
