@@ -5,6 +5,7 @@ import Header from "./components/header/Header"
 import Home from "./pages/Home"
 import Profile from "./pages/Profile"
 import Transportation from "./pages/Transportation"
+import Lodging from "./pages/Lodging"
 import NoPage from "./pages/NoPage"
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
                             path="/transportation"
                             element={<Transportation />}
                         />
+                        <Route path="/lodging" element={<Lodging />} />
                         <Route path="*" element={<NoPage />} />
                     </Routes>
                 </BrowserRouter>
