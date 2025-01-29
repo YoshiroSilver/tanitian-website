@@ -1,10 +1,10 @@
 import React from "react"
 
-import ImageCarousel from "../components/imagecarousel/imagecarousel"
-import Cards from "../components/cards/Cards"
+import ImageCarousel from "./../components/imagecarousel/ImageCarousel"
+import Cards from "./../components/cards/Cards"
 
-import { MainCarousel } from "../data/maincarousel"
-import { PointsOfInterest } from "../data/pointsOfInterest"
+import { MainCarousel } from "./../data/maincarousel"
+import { PointsOfInterest } from "./../data/pointsOfInterest"
 
 function Home() {
     return (

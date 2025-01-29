@@ -2,7 +2,7 @@ import React from 'react'
 
 function NoPage() {
     return (
-        <div>Nothing Found 404</div>
+        <div className="text-primary dark:text-primary-dark">Nothing Found 404</div>
     )
 }
 

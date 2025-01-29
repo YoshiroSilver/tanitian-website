@@ -7,6 +7,7 @@ import Profile from "./pages/Profile"
 import Transportation from "./pages/Transportation"
 import Lodging from "./pages/Lodging"
 import NoPage from "./pages/NoPage"
+import Attractions from "./pages/Attractions"
 
 const App = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -30,6 +31,7 @@ const App = () => {
                             element={<Transportation />}
                         />
                         <Route path="/lodging" element={<Lodging />} />
+                        <Route path="/attractions" element={<Attractions />} />
                         <Route path="*" element={<NoPage />} />
                     </Routes>
                 </BrowserRouter>
