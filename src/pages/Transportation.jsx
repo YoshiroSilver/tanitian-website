@@ -5,7 +5,7 @@ import Cards from "../components/cards/Cards"
 function Transportation() {
     return (
         <div className="m-4 mt-10 flex flex-wrap content-center justify-center">
-            <Cards data={TransportData} />
+            <Cards data={TransportData} type="horizontal" />
         </div>
     )
 }

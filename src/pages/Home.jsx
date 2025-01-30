@@ -24,7 +24,7 @@ function Home() {
             <h1 className="m-4 text-center text-3xl font-bold text-primary">
                 Points of Interest
             </h1>
-            <Cards data={PointsOfInterest} vertical={true} />
+            <Cards data={PointsOfInterest} type="vertical" />
         </>
     )
 }
