@@ -4,7 +4,6 @@ function ExpandingCard({ data }) {
     const [expanded,setExpanded] = useState(false);
 
     const toggleExpanded = () => {
-        console.log("Clicked on card")
         setExpanded(!expanded);
     }
 

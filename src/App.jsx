@@ -24,15 +24,12 @@ const App = () => {
                 <BrowserRouter>
                     <Routes>
                         <Route index element={<Home />} />
-                        <Route path="/home" element={<Home />} />
-                        <Route path="/profile" element={<Profile />} />
-                        <Route
-                            path="/transportation"
-                            element={<Transportation />}
-                        />
-                        <Route path="/lodging" element={<Lodging />} />
-                        <Route path="/attractions" element={<Attractions />} />
-                        <Route path="*" element={<NoPage />} />
+                        <Route path="/home" element={<Home/>} />
+                        <Route path="/profile" element={<Profile/>} />
+                        <Route path="/transportation" element={<Transportation/>} />
+                        <Route path="/lodging" element={<Lodging/>} />
+                        <Route path="/attractions" element={<Attractions/>} />
+                        <Route path="*" element={<NoPage/>} />
                     </Routes>
                 </BrowserRouter>
             </div>

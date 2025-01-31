@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import VerticalCard from "./VerticalCard"
 import HorizontalCard from "./HorizontalCard"
 import ExpandingCard from "./ExpandingCard"
+import LodgingCard from "./LodgingCard"
 
 function Cards({ data, type }) {
 
@@ -30,10 +31,20 @@ function Cards({ data, type }) {
                     )
                 case 'expanding':
                     return (
-                        <div className="flex flex-wrap rounded-lg bg-foreground">
+                        <div className="flex flex-wrap rounded-lg bg-foreground justify-center">
                         {data.map((_,index) => (
                             <div key={index}>
                             <ExpandingCard data={data[index]} />
+                            </div>
+                        ))}
+                        </div>
+                    )
+                case 'lodging':
+                    return (
+                        <div className="flex flex-col ">
+                        {data.map((_,index) => (
+                            <div key={index}>
+                            <LodgingCard data={data[index]} />
                             </div>
                         ))}
                         </div>
