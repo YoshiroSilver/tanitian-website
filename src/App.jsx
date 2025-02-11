@@ -24,7 +24,7 @@ const App = () => {
                 <HashRouter >
                     <Routes>
                         <Route index element={<Home />} />
-                        <Route path="/home" element={<Home/>} />
+                        <Route path="#" element={<Home/>} />
                         <Route path="/profile" element={<Profile/>} />
                         <Route path="/transportation" element={<Transportation/>} />
                         <Route path="/lodging" element={<Lodging/>} />
