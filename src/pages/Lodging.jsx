@@ -4,17 +4,24 @@ import Cards from "../components/cards/Cards"
 
 function Lodging() {
     const [lodgings, setLodgings] = useState([...LodgingData])
-    const [sortKey, setSortKey] = useState(null)
+    const [sortKey, setSortKey] = useState("title")
 
     const SortItems = (key) => {
-        console.log("button pressed: " + key)
         const sorted = [...lodgings].sort((a,b) => {
-            if (key === "title") return a.title.localeCompare(b.title)
-            if (key === "rating") return b.rating - a.rating
-            if (key === "cost") return a.costRating.localeCompare(b.costRating)
+            if (key === "title" && sortKey != key) return a.title.localeCompare(b.title)
+            if (key === "title" && sortKey === key) return b.title.localeCompare(a.title)
+            if (key === "rating" && sortKey != key) return b.rating - a.rating
+            if (key === "rating" && sortKey === key) return a.rating - b.rating
+            if (key === "cost" && sortKey != key) return a.costRating.localeCompare(b.costRating)
+            if (key === "cost" && sortKey === key) return b.costRating.localeCompare(a.costRating)
             return 0
         })
-        setSortKey(key)
+        if (key === sortKey) {
+            setSortKey(key + "desc")
+        }
+        else {
+            setSortKey(key)
+        }
         setLodgings(sorted)
     }
 

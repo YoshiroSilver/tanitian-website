@@ -8,8 +8,8 @@ function ExpandingCard({ data }) {
     }
 
     return (
-        <div className="m-2 flex flex-col items-center sm:m-3" onClick={toggleExpanded}>
-            <div className={`aspect-square overflow-hidden rounded-lg lg:max-w-60 ${expanded ? "w-full" : "w-40"}`}>
+        <div className="m-2 flex flex-col items-center sm:m-3" onMouseEnter={toggleExpanded} onMouseLeave={toggleExpanded} >
+            <div className={`aspect-square overflow-hidden rounded-lg lg:max-w-60 hover:w-full w-40`}>
                 <p className="rounded-t-lg bg-primary text-center text-primary-content">
                     {data.imgAttrib}
                 </p>

@@ -34,11 +34,11 @@ function Header({ handleMenuClick, isMenuOpen }) {
         /*header container */
         <div className="sticky top-0 z-10 mx-4 mb-2 flex translate-y-2 justify-between rounded-lg bg-foreground lg:mx-16 xl:mx-72">
             {/*menu icon */}
-            <div className="relative">
-                <IoIosMenu
-                    className="text-4xl font-extrabold text-primary"
+            <div className="relative content-center">
+                <button
+                    className="text-3xl font-extrabold text-primary"
                     onClick={handleMenuClick}
-                />
+               >Menu</button> 
                 <div
                     className={
                         isMenuOpen
@@ -61,14 +61,12 @@ function Header({ handleMenuClick, isMenuOpen }) {
                 </div>
             </div>
             {/*logo*/}
-            <a href="/home">
-                <div className="font-sans text-2xl font-extrabold text-primary">
-                    Taniti
+                <div className="font-sans text-4xl font-extrabold text-primary">
+                    <a href="/home">Taniti</a>
                 </div>
-            </a>
             {/*profile icon*/}
             <a href="/profile">
-                <IoIosPerson className="text-4xl font-extrabold text-primary" />
+                <IoIosPerson className="text-5xl font-extrabold text-primary mr-2" />
             </a>
         </div>
     )
