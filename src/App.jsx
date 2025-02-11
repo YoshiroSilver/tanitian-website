@@ -21,7 +21,7 @@ const App = () => {
         <div className="bg-background">
             <Header handleMenuClick={handleMenuClick} isMenuOpen={menuOpen} />
             <div className="mx-3 lg:mx-16 xl:mx-72">
-                <HashRouter basename={import.meta.env.BASE_URL}>
+                <HashRouter >
                     <Routes>
                         <Route index element={<Home />} />
                         <Route path="/home" element={<Home/>} />
