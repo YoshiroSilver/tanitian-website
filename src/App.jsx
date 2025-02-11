@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter,HashRouter, Routes, Route } from "react-router-dom"
 
 import Header from "./components/header/Header"
 import Home from "./pages/Home"
@@ -21,7 +21,7 @@ const App = () => {
         <div className="bg-background">
             <Header handleMenuClick={handleMenuClick} isMenuOpen={menuOpen} />
             <div className="mx-3 lg:mx-16 xl:mx-72">
-                <BrowserRouter basename={import.meta.env.BASE_URL}>
+                <HashRouter basename={import.meta.env.BASE_URL}>
                     <Routes>
                         <Route index element={<Home />} />
                         <Route path="/home" element={<Home/>} />
@@ -31,7 +31,7 @@ const App = () => {
                         <Route path="/attractions" element={<Attractions/>} />
                         <Route path="*" element={<NoPage/>} />
                     </Routes>
-                </BrowserRouter>
+                </HashRouter>
             </div>
         </div>
     )
