@@ -6,27 +6,28 @@ function Header({ handleMenuClick, isMenuOpen }) {
         {
             id: 1,
             name: "Home",
-            href: "/home",
+            href: "/tanitian-website/#/home",
         },
         {
             id: 2,
             name: "Profile",
-            href: "/profile",
+            href: "/tanitian-website/#/profile",
+        },
         },
         {
             id: 3,
             name: "Attractions",
-            href: "/attractions",
+            href: "/tanitian-website/#/attractions",
         },
         {
             id: 4,
             name: "Transportation",
-            href: "/transportation",
+            href: "/tanitian-website/#/transportation",
         },
         {
             id: 5,
             name: "Lodging",
-            href: "/lodging",
+            href: "/tanitian-website/#/lodging",
         },
     ]
 
@@ -62,10 +63,10 @@ function Header({ handleMenuClick, isMenuOpen }) {
             </div>
             {/*logo*/}
                 <div className="font-sans text-4xl font-extrabold text-primary">
-                    <a href="/home">Taniti</a>
+                    <a href="/tanitian-website/#/home">Taniti</a>
                 </div>
             {/*profile icon*/}
-            <a href="/profile">
+            <a href="/tanitian-website/#/profile">
                 <IoIosPerson className="text-5xl font-extrabold text-primary mr-2" />
             </a>
         </div>
