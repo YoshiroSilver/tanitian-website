@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yoshirosilver.github.io/tanitian-website",
+  "homepage": "https://yoshirosilver.github.io/tanitian-website/#",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
