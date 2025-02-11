@@ -13,7 +13,6 @@ function Header({ handleMenuClick, isMenuOpen }) {
             name: "Profile",
             href: "/tanitian-website/#/profile",
         },
-        },
         {
             id: 3,
             name: "Attractions",
