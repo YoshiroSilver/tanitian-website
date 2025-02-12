@@ -48,7 +48,7 @@ function Header({ handleMenuClick, isMenuOpen }) {
                 >
                     <ul className="mt-8 text-center">
                         {menuItems.map((item) => (
-                            <li key={item.id} className="m-4">
+                            <li key={item.id} className="m-4" onClick={handleMenuClick}>
                                 <a
                                     href={item.href}
                                     className="font-bold text-primary-content"
